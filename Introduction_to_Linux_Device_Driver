@@ -1,1 +1,65 @@
 
+*****Architecture**************
+
+
+Application Code
+                              user space
+C library
+----------------------------
+system interface
+generic services             kernel space
+device drivers
+
+---------------------------
+                            hardware
+                            
+                            
+the communication between the user space and driver must pass by the kernel drivers
+the user space use system call to communicate with the kernel.
+
+
+
+
+*Linux kernel modules
+peace of code that can be loaded or unloaded upon demand
+
+Type: 
+
+static kernel modules:
+dynamique kernel modules
+
+Advantage :
+no need to recompile the kernel evry time 
+load and load evry time .
+
+*Device driver 
+
+software application that interact with hardware device.
+
+
+*Device Driver 
+
+-Linux treats evry things as device file
+-device file is an interface for device driver
+-devices files are stored under /dev/
+
+*Device Driver Types
+
+-Character device
+-block device
+-network device
+
+
+*Character device driver 
+
+hardware file that read /write data  character by character
+example:mouse ,key board
+
+*Block Device 
+hardware file that read /write by block instead of character by character
+example:HDD ,USB
+
+
+*network device driver 
+
+hardware file that read/write data to network device network 
