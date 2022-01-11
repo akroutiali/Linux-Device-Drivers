@@ -1,0 +1,39 @@
+*Module information
+
+-License
+      MODULE_LICENSE("GPL");
+      MODULE_LICENSE("GPL v2");
+      MODULE_LICENSE("Dual BSD/GPL");
+-Author
+      MODULE_AUTHOR("Author");
+-Module Description
+      MODULE_DESCRIPTION("A sample driver");
+-Module version
+      MODULE_VERSION("2:1.0");
+      
+===>we must include this file "linux/module.h" to use those macro.
+
+*linux driver function 
+
+-init function
+this function will execute when the driver is loaded in the kernel
+when we load the driver using insmod this function will executed
+
+
+static int __init hello_world_init(void) /* Constructor */
+{
+    return 0;
+}
+module_init(hello_world_init);
+This function should register itself by using module_init() macro.
+
+
+-exit function
+this function will execute last when module kernel is unloaded
+
+void __exit hello_world_exit(void)
+{
+}
+module_exit(hello_world_exit);
+This function should register itself by using module_exit() macro.
+
