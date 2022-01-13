@@ -1,0 +1,40 @@
+*********Module Parameters Macros *****************
+
+*module_param(name,type,perm):
+
+the macro module_param used to initialize the arguments : 
+it will create variable  under /sys/modules/ with the permission perm.
+this macro is declared in the following file :linux/moduleparam.h
+
+Example : 
+module_param(valueETX, int, S_IWUSR|S_IRUSR);
+
+-there are severals type of permission :
+
+
+S_IWUSR
+S_IRUSR
+S_IXUSR
+S_IRGRP
+S_IWGRP
+S_IXGRP
+In this S_I is a common header.
+R = read ,W =write ,X= Execute.
+USR =user ,GRP =Group
+Using OR ‘|’ (or operation) we can set multiple permissions at a time.
+
+*module_param_array()
+the macro is used to send an array as argument to the device drivers : 
+
+module_param_array(name,type,num,perm);
+
+
+*module_param_cb()
+
+this macro is used to register the callback .
+
+
+
+
+
+
