@@ -63,3 +63,33 @@ example:HDD ,USB
 *network device driver 
 
 hardware file that read/write data to network device network 
+
+
+
+
+
+
+
+-----------------------------------------Devices Drivers architecture-------------------
+
+
+
+--------------
+Applications
+------------------
+Device File
+------------------
+Manjor Minor numbers
+------------------
+Device Drivers
+------------------
+HARDWARE
+------------------
+
+
+-applications will open the device file .the device file is created by the driver
+-the device file will find the crossponding driver using the major and minor number.
+-the driver will talk to hardware.
+
+Major Number:will identify the driver associated to the device file 
+Minor Number :
